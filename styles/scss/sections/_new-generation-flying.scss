@@ -1,0 +1,118 @@
+.new-generation-flying {
+  min-height: 850px;
+  .flying-content {
+    overflow: hidden;
+  }
+  .item-flying {
+    padding-top: 350px;
+      float: left;
+      width: 50%;
+    h4 {
+      font-family: $fontStack;
+      font-weight: $regular;
+      font-size: $large;
+      color: $shadow;
+      @include transition(0.5s);
+    }
+    .popup-text-flying {
+      font-family: $fontStack;
+      font-weight: $regular;
+      color: $grey;
+      font-size: 16px;
+      padding: 15px 0;
+      display: none;
+    }
+  }
+}
+
+.image-item-flying {
+  width: 50%;
+  height: initial;
+  overflow: hidden;
+  padding-top: 200px;
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.btn-product {
+  margin-top: 40px;
+  @include button-product;
+}
+
+.btn-product:hover {
+  @include button-hover;
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .new-generation-flying {
+    padding: 0 15px;
+  }
+  .new-generation-flying .item-flying h4 {
+    font-size: 70px;
+  }
+  .new-generation-flying .item-flying, .image-item-flying {
+    padding-top: 175px;
+  }
+  .small-text {
+    font-size: 50px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .new-generation-flying {
+    min-height: 550px;
+  }
+  .new-generation-flying {
+    padding: 0 15px;
+  }
+  .new-generation-flying .item-flying h4 {
+    font-size: 58px;
+  }
+  .new-generation-flying .item-flying, .image-item-flying {
+    padding-top: 100px;
+  }
+  .small-text {
+    font-size: 45px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .new-generation-flying {
+    min-height: 550px;
+  }
+  .new-generation-flying {
+    padding: 0 15px;
+  }
+  .new-generation-flying .item-flying h4 {
+    font-size: 58px;
+  }
+  .new-generation-flying .item-flying, .image-item-flying {
+    padding-top: 100px;
+  }
+  .small-text {
+    font-size: 45px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .new-generation-flying {
+    min-height: 60px;
+    padding-bottom: 50px;
+  }
+  .new-generation-flying {
+    padding-left: 15px;
+  }
+  .new-generation-flying .item-flying h4 {
+    font-size: 30px;
+  }
+  .new-generation-flying .item-flying, .image-item-flying {
+    padding-top: 60px;
+  }
+  .small-text {
+    font-size: 45px !important;
+  }
+}

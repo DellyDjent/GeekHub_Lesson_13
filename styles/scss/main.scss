@@ -1,0 +1,21 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
+@import "compass/css3";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+@import "base/buttos";
+@import "base/mixins";
+@import "base/reset_styles";
+@import "base/variables";
+@import "sections/welcome-section";
+@import "sections/tap-fly";
+@import "sections/features";
+@import "sections/new-generation-vision";
+@import "sections/new-generation-flying";
+@import "sections/last-section";
+@import "sections/footer";

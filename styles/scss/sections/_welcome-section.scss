@@ -1,0 +1,388 @@
+p {
+  font-weight: $regular;
+  color: $grey;
+  font-size: $small;
+}
+
+.welcome-section {
+  background: url("../../img/bg_top.jpg") no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  .welcome-section-content {
+    padding: 65px 0;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .welcome-header {
+    position: relative;
+    margin-bottom: 100px;
+    .phone {
+      background: url(../../img/bg_phone.png) 0 50% no-repeat;
+      padding-left: 15px;
+      font-weight: 300;
+      font-size: 14px;
+      color: #92a1a5;
+      @include transition;
+      cursor: context-menu;
+    }
+    .phone:hover {
+      color: $strawberry;
+    }
+  }
+}
+
+.list-top-information {
+  overflow: hidden;
+  padding: 0 15px;
+  li {
+    display: inline-block;
+  }
+  .logo-block {
+    padding-top: 15px;
+    float: left;
+  }
+  .block-phone {
+    padding-top: 20px;
+    margin-left: 100px;
+  }
+  .block-btn-buy {
+    float: right;
+    margin-right: 70px;
+    .btn-buy {
+      font-weight: $bold;
+      font-size: 16px;
+      color: $white;
+      text-transform: $transform;
+      text-decoration: underline;
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.block-height {
+  height: 75%;
+}
+
+.slider-block {
+  height: inherit;
+  @include display-flex;
+  .dot {
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    a {
+      display: block;
+      width: 8px;
+      height: 8px;
+      @include border-radius(50%);
+      background-color: #e1e1e1;
+    }
+    &.active {
+      a {
+        background-color: $strawberry;
+      }
+    }
+  }
+}
+
+.list-description {
+  @include display-flex;
+  @include flex-direction(column);
+  @include justify-content(center);
+  width: 25%;
+}
+
+.list-description .item-block {
+  display: block;
+  .description {
+    @include display-flex;
+    @include flex-direction(column);
+    @include justify-content(center);
+    h4 {
+      font-family: $fontStack;
+      font-weight: $bold;
+      color: $black;
+      text-transform: $transform;
+      font-size: $medium;
+      margin-bottom: 20px;
+    }
+    p {
+      font-weight: $regular;
+      color: $grey;
+      font-size: $small;
+    }
+  }
+}
+.item-slide {
+  display: none;
+  margin: 0 auto;
+}
+.description {
+  @include display-flex;
+  @include flex-direction(column);
+  @include justify-content(center);
+  h4 {
+    font-family: $fontStack;
+    font-weight: $bold;
+    color: $black;
+    text-transform: $transform;
+    font-size: $medium;
+    margin-bottom: 20px;
+  }
+  p {
+    font-weight: $regular;
+    color: $grey;
+    font-size: $small;
+  }
+}
+
+.image-slide {
+  width: 60%;
+  height: initial;
+  overflow: hidden;
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.list-dots {
+  @include display-flex;
+  @include flex-direction(column);
+  @include justify-content(center);
+  padding: 0 40px;
+}
+
+.wrap-scrl-down {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-top: 100px;
+  .scrl-down {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-weight: $bold;
+    font-family: $fontStack;
+    color: $black;
+    font-size: 18px;
+    display: block;
+    @include transform (rotate(-90deg));
+    -webkit-animation: 3s down infinite;
+  }
+  @-webkit-keyframes down {
+    50% {top: 20px}
+  }
+}
+
+.color-strawberry {
+  color: $strawberry;
+}
+
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+.hvr-ripple-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  top: -13px;
+  left: -7px;
+  padding: 5px;
+}
+.hvr-ripple-out:before {
+  content: '';
+  position: absolute;
+  @include border-radius(50%);
+  border: $strawberry solid 3px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+h1:hover .hvr-ripple-out:before, h1:focus .hvr-ripple-out:before, h1:active .hvr-ripple-out:before {
+  -webkit-animation-name: hvr-ripple-out;
+  animation-name: hvr-ripple-out;
+}
+
+@media (min-width: 1600px) {
+  .container {
+    width: 1600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1600px) {
+  .container {
+    width: 100%;
+  }
+  .list-top-information {
+    padding: 0 25px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .wrap-scrl-down {
+    margin-top: 80px;
+  }
+  .list-description .item-block .description h4, .description h4 {
+    font-size: 47px;
+  }
+
+  .tap-fly .block-left-head h4 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .welcome-section .welcome-section-content {
+    padding: 40px 0;
+  }
+  .welcome-section .welcome-header {
+    margin-bottom: 55px;
+  }
+  .block-height {
+    height: 80%;
+  }
+  .wrap-scrl-down {
+    margin-top: 15px;
+  }
+  .list-description .item-block .description h4, .description h4 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .tap-fly .block-left-head h4 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .welcome-section {
+    height: auto;
+  }
+  .welcome-section .welcome-section-content {
+    padding: 40px 0;
+  }
+  .welcome-section .welcome-header {
+    margin-bottom: 55px;
+  }
+  .block-height {
+    height: 80%;
+  }
+  .wrap-scrl-down {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+  .wrap-scrl-down .scrl-down {
+    transform: rotate(0deg);
+  }
+  .list-description .item-block .description h4, .description h4 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .tap-fly .block-left-head h4 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .welcome-section {
+    background: #fff;
+    height: auto;
+  }
+  .list-top-information {
+    @include justify-content (space-between);
+    @include display-flex;
+    @include flex-direction (row);
+    @include flex-wrap (wrap);
+    padding: 0 15px;
+  }
+  .list-top-information .block-phone {
+    padding-top: 20px;
+    margin-left: 20px;
+  }
+  .list-top-information .block-btn-buy {
+    float: right;
+    padding-top: 20px;
+  }
+  .list-top-information .block-btn-buy .btn-buy {
+    color: #92a1a5;
+  }
+  .welcome-section .welcome-section-content {
+    padding: 10px 0;
+  }
+  .welcome-section .welcome-header {
+    margin-bottom: 55px;
+  }
+  .slider-block {
+    height: inherit;
+    overflow: hidden;
+  }
+  .list-dots {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 0 10px;
+    width: 30px;
+    float: left;
+  }
+  .list-description {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 50%;
+  }
+  .image-slide {
+    width: 50%;
+    height: initial;
+  }
+  .block-height {
+    height: 80%;
+  }
+  .wrap-scrl-down {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .wrap-scrl-down .scrl-down {
+    transform: rotate(0deg);
+    left: 0;
+    top: 0;
+  }
+  .list-description .item-block .description h4, .description h4 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .tap-fly .block-left-head h4 {
+    font-size: 28px;
+  }
+}

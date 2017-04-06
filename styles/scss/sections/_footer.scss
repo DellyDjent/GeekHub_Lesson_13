@@ -1,0 +1,69 @@
+footer {
+  max-width: 2000px;
+  margin: 0 auto;
+  .content-footer {
+    overflow: hidden;
+    padding: 200px 0;
+    text-align: center;
+    .logo-footer {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: $black;
+    }
+  }
+  h4 {
+    font-family: $fontStack;
+    font-weight: $regular;
+    font-size: $large;
+    color: $shadow;
+    margin-bottom: 60px;
+  }
+  .popup-text {
+    font-family: $fontStack;
+    font-weight: $regular;
+    color: $strawberry;
+    font-size: 16px;
+    padding: 15px 0;
+    display: none;
+  }
+}
+
+@keyframes hvr-ripple-footer {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+
+.hvr-ripple-footer {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  top: -13px;
+  left: -7px;
+  padding: 5px;
+}
+
+.hvr-ripple-footer:before {
+  content: '';
+  position: absolute;
+  @include border-radius(50%);
+  border: $strawberry solid 3px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.content-footer:hover .hvr-ripple-footer:before {
+  -webkit-animation-name: hvr-ripple-out;
+  animation-name: hvr-ripple-out;
+}

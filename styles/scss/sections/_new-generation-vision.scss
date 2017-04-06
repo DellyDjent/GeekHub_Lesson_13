@@ -1,0 +1,130 @@
+.new-generation-vision {
+  min-height: 650px;
+  background: url(../../img/bg_new_vision.png) no-repeat;
+  background-size: 100% 100%;
+  .vision-content {
+    overflow: hidden;
+  }
+
+  .item-vision {
+    padding-top: 150px;
+    float: right;
+    width: 50%;
+    .btn-view {
+      margin-top: 40px;
+      @include button-view;
+    }
+
+    h4 {
+      font-family: $fontStack;
+      font-weight: $regular;
+      font-size: $large;
+      color: $white;
+      @include transition(0.5s);
+    }
+    .popup-text-vision {
+      font-family: $fontStack;
+      font-weight: $regular;
+      color: $grey;
+      font-size: 16px;
+      display: none;
+    }
+  }
+}
+
+.btn-view {
+  @include button-view;
+}
+
+.btn-view:hover {
+  @include button-hover;
+}
+
+.small-text {
+  font-size: 70px !important;
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .new-generation-vision {
+    min-height: 465px;
+  }
+  .new-generation-vision .item-vision {
+    padding-top: 110px;
+  }
+  .new-generation-vision .item-vision h4 {
+    font-size: 70px;
+  }
+  .new-generation-flying .item-flying, .image-item-flying {
+    padding-top: 175px;
+  }
+  .small-text {
+    font-size: 50px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .new-generation-vision {
+    min-height: 400px;
+  }
+  .new-generation-vision .item-vision {
+    padding-top: 80px;
+  }
+  .new-generation-vision .item-vision h4 {
+    font-size: 58px;
+  }
+  .new-generation-flying .item-flying, .image-item-flying {
+    padding-top: 175px;
+  }
+  .small-text {
+    font-size: 45px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .new-generation-vision {
+    min-height: 400px;
+  }
+  .new-generation-vision .item-vision {
+    padding-top: 80px;
+  }
+  .new-generation-vision .item-vision h4 {
+    font-size: 58px;
+  }
+  .new-generation-flying .item-flying, .image-item-flying {
+    padding-top: 175px;
+  }
+  .small-text {
+    font-size: 45px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .new-generation-vision {
+    min-height: 300px;
+    background-size: cover;
+  }
+  .new-generation-vision .item-vision {
+    padding-top: 20px;
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  .new-generation-vision .item-vision h4 {
+    font-size: 42px;
+  }
+  .new-generation-vision .item-vision .popup-text-vision {
+    font-size: 14px;
+  }
+  .new-generation-vision .item-vision .btn-view {
+    margin-top: 40px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 110px;
+    height: 30px;
+  }
+  .small-text {
+    font-size: 25px !important;
+  }
+}

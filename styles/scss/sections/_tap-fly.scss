@@ -1,0 +1,319 @@
+.tap-fly {
+  overflow: hidden;
+  min-height: 615px;
+  .block-left {
+    position: relative;
+    background: url("../../img/bg_tap_fly.jpg") no-repeat;
+    background-size: cover;
+    @include display-flex;
+    @include flex-direction(column);
+    @include justify-content(center);
+    width: 35%;
+    float: left;
+    min-height: 615px;
+  }
+  .block-left-head {
+    padding-left: 60px;
+    @include align-self(center);
+    h4 {
+      font-family: $fontStack;
+      font-weight: $bold;
+      color: $black;
+      font-size: $medium;
+    }
+  }
+}
+
+.block-circle {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  @include transform (translate(35%));
+}
+
+.tor-pulsate1 {
+  border:30px solid #d8ecf1;
+  @include border-radius(50%);
+  height:150px;
+  left:50%;
+  margin:-15px 0 0 -15px;
+  opacity:0;
+  position:absolute;
+  top:50%;
+  width:150px;
+  animation: pulsate1 1s ease-out;
+  animation-iteration-count:infinite;
+}
+@-webkit-keyframes pulsate1 {
+  0% {
+    @include transform(scale(.9));
+    opacity: 0.0;
+  }
+  50% {
+    opacity:1;
+  }
+  100% {
+    @include transform(scale(1.9));
+    opacity:0;
+  }
+}
+@keyframes pulsate1 {
+  0% {
+    @include transform(scale(.9));
+    opacity: 0.0;
+  }
+  50% {
+    opacity:1;
+  }
+  100% {
+    @include transform(scale(1.9));
+    opacity:0;
+  }
+}
+
+.tor-pulsate2 {
+  border:30px solid #d8ecf1;
+  background-color: #a8ecf1;
+  @include border-radius(50%);
+  height:150px;
+  left:50%;
+  margin:-15px 0 0 -15px;
+  opacity:0;
+  position:absolute;
+  top:50%;
+  width:150px;
+  animation: pulsate2 1s ease-out;
+  animation-iteration-count:infinite;
+}
+@-webkit-keyframes pulsate2 {
+  0% {
+    @include transform(scale(.9));
+    opacity: 0.0;
+  }
+  50% {
+    opacity:1;
+  }
+  100% {
+    @include transform(scale(1.4));
+    opacity:0;
+  }
+}
+@keyframes pulsate2 {
+  0% {
+    @include transform(scale(.9));
+    opacity: 0.0;
+  }
+  50% {
+    opacity:1;
+  }
+  100% {
+    @include transform(scale(1.4));
+    opacity:0;
+  }
+}
+
+.block-right {
+  position: relative;
+  @include display-flex;
+  @include flex-direction(column);
+  @include justify-content(center);
+  width: 65%;
+  float: right;
+  min-height: 615px;
+  background: url("../../img/bg_tap_fly_1.jpg") no-repeat;
+  background-size: cover;
+  z-index: 500;
+}
+
+.block-right-head {
+  @include display-flex;
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  width: 85%;
+  margin: 0 auto;
+  .btn-view {
+    @include transform(rotate(-90deg));
+    @include transition (0.8s);
+    position: absolute;
+    left: 75%;
+    top: 50%;
+  }
+  h4 {
+    font-family: $fontStack;
+    font-weight: $bold;
+    color: $white;
+    font-size: $medium;
+  }
+}
+
+.block-right:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 43%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.65);
+  @include transition(0.8s);
+}
+
+.block-right-head .btn-view:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 123%;
+  top: 23px;
+  left: -125%;
+  background-color: $white;
+  height: 1px;
+  @include transition(0.8s);
+}
+
+.tap-fly:hover .block-right:before {
+  width: 75%;
+}
+
+.tap-fly:hover .block-right-head .btn-view {
+  @include transform(rotate(0deg));
+  color: $black;
+  font-size: 18px;
+  font-weight: $bold;
+  text-transform: $transform;
+  width: 180px;
+  height: 50px;
+  background: $white;
+  border: 2px solid $white;
+  @include transition (.5s);
+  @include border-radius (111px);
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .tap-fly {
+    min-height: 425px;
+  }
+  .tap-fly .block-left, .block-right {
+    min-height: 425px;
+  }
+  .tap-fly .block-left-head h4 {
+    font-size: 47px;
+  }
+  .block-right-head {
+    width: 95%;
+    margin-left: 30px;
+  }
+  .block-right-head h4 {
+    font-size: 47px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .tap-fly {
+    min-height: 425px;
+  }
+  .tap-fly .block-left, .block-right {
+    min-height: 425px;
+  }
+  .tap-fly .block-left-head h4 {
+    font-size: 47px;
+  }
+  .block-right-head {
+    width: 95%;
+    margin-left: 30px;
+  }
+  .block-right-head h4 {
+    font-size: 47px;
+  }
+  .block-right:before {
+    width: 50%;
+  }
+  .block-right-head .btn-view {
+    @include transform(rotate(-90deg));
+    margin-left: 140px;
+    margin-top: 40px;
+    @include transition(0.8s);
+    position: relative;
+    font-size: 15px;
+    width: 140px;
+    height: 40px;
+    left: 0;
+  }
+  .tap-fly:hover .block-right-head .btn-view {
+    font-size: 15px;
+    width: 140px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .tap-fly {
+    min-height: 390px;
+  }
+  .tap-fly .block-left, .block-right {
+    min-height: 390px;
+  }
+  .tap-fly .block-left-head h4 {
+    font-size: 47px;
+  }
+  .block-right-head {
+    width: 95%;
+    margin-left: 30px;
+  }
+  .block-right-head h4 {
+    font-size: 47px;
+  }
+  .block-right:before {
+    width: 50%;
+  }
+  .tap-fly:hover .block-right-head .btn-view {
+    font-size: 15px;
+    width: 140px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tap-fly {
+    min-height: 390px;
+  }
+  .block-circle {
+    top: 65%;
+  }
+  .tap-fly .block-left {
+    width: 100%;
+    float: none;
+  }
+  .tap-fly .block-left, .block-right {
+    min-height: 290px;
+    width: 100%;
+    float: none;
+  }
+  .tap-fly .block-left-head h4 {
+    font-size: 47px;
+  }
+  .block-right-head {
+    width: 100%;
+  }
+  .block-right-head h4 {
+    font-size: 35px;
+  }
+  .block-right:before {
+    width: 60%;
+  }
+  .tap-fly:hover .block-right:before {
+    width: 70%;
+  }
+  .block-right-head .btn-view {
+    width: 110px;
+    height: 35px;
+    font-size: 12px;
+    left: 70%;
+  }
+  .block-right-head .btn-view:before {
+    top: 16px;
+  }
+  .tap-fly:hover .block-right-head .btn-view {
+    width: 110px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+}

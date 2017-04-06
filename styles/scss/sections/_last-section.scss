@@ -1,0 +1,66 @@
+.last-section {
+  background: url(../../img/bg_last_section.jpg) no-repeat;
+  background-size: cover;
+  min-height: 1100px;
+  padding-top: 700px;
+  box-sizing: border-box;
+  .last-section-content {
+    text-align: center;
+    overflow: hidden;
+  }
+  h4 {
+      font-family: $fontStack;
+      font-weight: $bold;
+      font-size: $large;
+      color: $white;
+      @include transition (0.5s);
+  }
+  .popup-text-enjoy {
+      font-family: $fontStack;
+      font-weight: $regular;
+      color: $shadow;
+      font-size: 16px;
+      padding: 15px 0;
+      display: none;
+  }
+}
+
+.btn-last {
+  margin-top: 40px;
+  @include btn-last;
+}
+
+.btn-last:hover {
+  @include button-hover;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .last-section {
+    background: url(../../img/bg_last_section.jpg) no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    padding-top: 298px;
+    box-sizing: border-box;
+  }
+  .last-section h4 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .last-section {
+    background: url(../../img/bg_last_section.jpg) no-repeat;
+    background-size: cover;
+    height: auto;
+    min-height: inherit;
+    padding: 100px 0;
+    box-sizing: border-box;
+  }
+  .last-section h4 {
+    font-size: 50px;
+    color: $strawberry;
+  }
+  .small-text {
+    font-size: 35px !important;
+  }
+}
